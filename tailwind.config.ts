@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        clinical: ['IBM Plex Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'Consolas', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        topbar: {
+          DEFAULT: "hsl(var(--topbar))",
+          foreground: "hsl(var(--topbar-foreground))",
+        },
+        risk: {
+          high: "hsl(var(--risk-high))",
+          "high-bg": "hsl(var(--risk-high-bg))",
+          "high-foreground": "hsl(var(--risk-high-foreground))",
+          moderate: "hsl(var(--risk-moderate))",
+          "moderate-bg": "hsl(var(--risk-moderate-bg))",
+          "moderate-foreground": "hsl(var(--risk-moderate-foreground))",
+          safe: "hsl(var(--risk-safe))",
+          "safe-bg": "hsl(var(--risk-safe-bg))",
+          "safe-foreground": "hsl(var(--risk-safe-foreground))",
+          unknown: "hsl(var(--risk-unknown))",
+          "unknown-bg": "hsl(var(--risk-unknown-bg))",
+          "unknown-foreground": "hsl(var(--risk-unknown-foreground))",
+        },
+        clinical: {
+          blue: "hsl(var(--clinical-blue))",
+          "blue-light": "hsl(var(--clinical-blue-light))",
+          border: "hsl(var(--clinical-border))",
+          surface: "hsl(var(--clinical-surface))",
+          hover: "hsl(var(--clinical-hover))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,20 +94,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
