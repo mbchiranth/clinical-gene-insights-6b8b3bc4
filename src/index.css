@@ -1,96 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 60% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 15% 93%;
+    --secondary-foreground: 215 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 12% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 30% 90%;
+    --accent-foreground: 210 60% 30%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 18% 87%;
+    --input: 210 18% 87%;
+    --ring: 210 60% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Clinical risk colors */
+    --risk-high: 0 72% 51%;
+    --risk-high-bg: 0 72% 96%;
+    --risk-high-foreground: 0 72% 38%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --risk-moderate: 38 92% 50%;
+    --risk-moderate-bg: 38 92% 95%;
+    --risk-moderate-foreground: 38 80% 30%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --risk-safe: 142 60% 40%;
+    --risk-safe-bg: 142 60% 95%;
+    --risk-safe-foreground: 142 60% 25%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --risk-unknown: 210 10% 58%;
+    --risk-unknown-bg: 210 10% 95%;
+    --risk-unknown-foreground: 210 10% 35%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Clinical UI tokens */
+    --clinical-blue: 210 60% 40%;
+    --clinical-blue-light: 210 50% 95%;
+    --clinical-border: 210 18% 87%;
+    --clinical-surface: 210 20% 99%;
+    --clinical-hover: 210 25% 96%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --topbar: 215 30% 18%;
+    --topbar-foreground: 210 20% 95%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 215 20% 30%;
+    --sidebar-primary: 210 60% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 95%;
+    --sidebar-accent-foreground: 210 60% 30%;
+    --sidebar-border: 210 18% 90%;
+    --sidebar-ring: 210 60% 40%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Evidence level colors */
+    --evidence-a: 210 60% 40%;
+    --evidence-b: 210 30% 55%;
+    --evidence-c: 210 15% 65%;
+
+    /* Font families */
+    --font-clinical: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --background: 215 30% 10%;
+    --foreground: 210 20% 90%;
+    --card: 215 28% 14%;
+    --card-foreground: 210 20% 90%;
+    --popover: 215 28% 14%;
+    --popover-foreground: 210 20% 90%;
+    --primary: 210 55% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 210 15% 60%;
+    --accent: 215 25% 22%;
+    --accent-foreground: 210 55% 65%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 210 55% 55%;
+    --topbar: 215 35% 12%;
+    --topbar-foreground: 210 20% 90%;
+    --sidebar-background: 215 30% 12%;
+    --sidebar-foreground: 210 15% 70%;
+    --sidebar-primary: 210 55% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 55% 65%;
+    --sidebar-border: 215 20% 20%;
+    --sidebar-ring: 210 55% 55%;
   }
 }
 
@@ -101,5 +122,152 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-clinical);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-clinical);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  /* Risk badge variants */
+  .risk-badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold uppercase tracking-wide;
+  }
+
+  .risk-badge-high {
+    background-color: hsl(var(--risk-high-bg));
+    color: hsl(var(--risk-high-foreground));
+    border: 1px solid hsl(var(--risk-high) / 0.3);
+  }
+
+  .risk-badge-moderate {
+    background-color: hsl(var(--risk-moderate-bg));
+    color: hsl(var(--risk-moderate-foreground));
+    border: 1px solid hsl(var(--risk-moderate) / 0.3);
+  }
+
+  .risk-badge-safe {
+    background-color: hsl(var(--risk-safe-bg));
+    color: hsl(var(--risk-safe-foreground));
+    border: 1px solid hsl(var(--risk-safe) / 0.3);
+  }
+
+  .risk-badge-unknown {
+    background-color: hsl(var(--risk-unknown-bg));
+    color: hsl(var(--risk-unknown-foreground));
+    border: 1px solid hsl(var(--risk-unknown) / 0.3);
+  }
+
+  /* Evidence level badges */
+  .evidence-badge {
+    @apply inline-flex items-center justify-center w-6 h-6 rounded text-xs font-bold;
+  }
+
+  .evidence-a {
+    background-color: hsl(var(--evidence-a) / 0.12);
+    color: hsl(var(--evidence-a));
+    border: 1px solid hsl(var(--evidence-a) / 0.3);
+  }
+
+  .evidence-b {
+    background-color: hsl(var(--evidence-b) / 0.12);
+    color: hsl(var(--evidence-b));
+    border: 1px solid hsl(var(--evidence-b) / 0.3);
+  }
+
+  .evidence-c {
+    background-color: hsl(var(--evidence-c) / 0.12);
+    color: hsl(var(--evidence-c));
+    border: 1px solid hsl(var(--evidence-c) / 0.3);
+  }
+
+  /* Clinical table styles */
+  .clinical-table {
+    @apply w-full text-sm;
+  }
+
+  .clinical-table th {
+    @apply text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground px-4 py-3 border-b-2;
+  }
+
+  .clinical-table td {
+    @apply px-4 py-3 border-b;
+  }
+
+  .clinical-table tr:hover td {
+    background-color: hsl(var(--clinical-hover));
+  }
+
+  /* Risk card */
+  .risk-card {
+    @apply rounded-md border bg-card p-4 cursor-pointer transition-all;
+  }
+
+  .risk-card:hover {
+    @apply shadow-sm;
+    border-color: hsl(var(--primary) / 0.3);
+  }
+
+  .risk-card-high {
+    border-left: 3px solid hsl(var(--risk-high));
+  }
+
+  .risk-card-moderate {
+    border-left: 3px solid hsl(var(--risk-moderate));
+  }
+
+  .risk-card-safe {
+    border-left: 3px solid hsl(var(--risk-safe));
+  }
+
+  .risk-card-unknown {
+    border-left: 3px solid hsl(var(--risk-unknown));
+  }
+
+  /* Alert styles */
+  .clinical-alert {
+    @apply rounded-md border p-3 mb-2 text-sm;
+  }
+
+  .clinical-alert-hard {
+    background-color: hsl(var(--risk-high-bg));
+    border-color: hsl(var(--risk-high) / 0.4);
+    color: hsl(var(--risk-high-foreground));
+  }
+
+  .clinical-alert-soft {
+    background-color: hsl(var(--risk-moderate-bg));
+    border-color: hsl(var(--risk-moderate) / 0.4);
+    color: hsl(var(--risk-moderate-foreground));
+  }
+
+  /* Topbar */
+  .topbar {
+    background-color: hsl(var(--topbar));
+    color: hsl(var(--topbar-foreground));
+  }
+
+  /* Genotype box */
+  .genotype-box {
+    @apply rounded border bg-muted px-3 py-2 font-mono text-sm font-medium;
+  }
+
+  /* Compliance indicator */
+  .compliance-badge {
+    @apply inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded;
+    background-color: hsl(var(--risk-safe-bg));
+    color: hsl(var(--risk-safe-foreground));
   }
 }
