@@ -4,6 +4,7 @@ import RiskSummaryCards from "@/components/RiskSummaryCards";
 import GeneDrugTable from "@/components/GeneDrugTable";
 import ClinicalAlerts from "@/components/ClinicalAlerts";
 import AIInsightsPanel from "@/components/AIInsightsPanel";
+import RiskVisualizationPanel from "@/components/RiskVisualizationPanel";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
 
 const Index = () => {
@@ -32,6 +33,8 @@ const Index = () => {
           </div>
 
           <GeneDrugTable filterRisk={riskFilter} />
+
+          <RiskVisualizationPanel />
 
           <AIInsightsPanel />
         </div>

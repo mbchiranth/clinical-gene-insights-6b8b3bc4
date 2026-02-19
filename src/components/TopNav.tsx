@@ -1,8 +1,10 @@
-import { Search, Bell, User, Shield } from "lucide-react";
+import { Search, Bell, User, Shield, LogOut } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 
 const TopNav = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const { user, signOut } = useAuth();
 
   return (
     <header className="topbar h-12 flex items-center justify-between px-4 shrink-0">
@@ -36,7 +38,17 @@ const TopNav = () => {
           <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
             <User className="h-3.5 w-3.5 text-primary-foreground" />
           </div>
-          <span className="text-xs text-topbar-foreground opacity-80">Dr. S. Chen</span>
+          <span className="text-xs text-topbar-foreground opacity-80">
+            {user?.user_metadata?.full_name || user?.email?.split("@")[0] || "Clinician"}
+          </span>
+          <button
+            onClick={signOut}
+            className="p-1 rounded hover:bg-topbar-foreground/10 transition-colors"
+            aria-label="Sign out"
+            title="Sign out"
+          >
+            <LogOut className="h-3.5 w-3.5 text-topbar-foreground opacity-60" />
+          </button>
         </div>
       </div>
     </header>
