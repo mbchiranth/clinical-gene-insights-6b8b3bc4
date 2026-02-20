@@ -7,6 +7,7 @@ import {
   FileText,
   Settings,
   ShieldCheck,
+  FileUp,
   Activity,
   ChevronLeft,
   ChevronRight,
@@ -19,6 +20,7 @@ const navItems = [
   { title: "Drug Search", url: "/drug-search", icon: Pill },
   { title: "Gene Insights", url: "/gene-insights", icon: Dna },
   { title: "Reports", url: "/reports", icon: FileText },
+  { title: "VCF Analysis", url: "/vcf-analysis", icon: FileUp },
   { title: "Admin / Guidelines", url: "/admin", icon: Settings },
 ];
 
