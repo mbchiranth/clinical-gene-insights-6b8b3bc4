@@ -13,6 +13,7 @@ import DrugSearch from "./pages/DrugSearch";
 import Reports from "./pages/Reports";
 import PatientList from "./pages/PatientList";
 import Admin from "./pages/Admin";
+import VcfAnalysis from "./pages/VcfAnalysis";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
@@ -45,6 +46,7 @@ const AppLayout = () => (
             <Route path="/reports" element={<Reports />} />
             <Route path="/patients" element={<PatientList />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/vcf-analysis" element={<VcfAnalysis />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
