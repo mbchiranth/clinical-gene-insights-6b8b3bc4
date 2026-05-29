@@ -75,6 +75,8 @@ const Admin = () => {
             </div>
           </div>
         </div>
+        </div>
+        </ScrollArea>
       </div>
     </div>
   );
