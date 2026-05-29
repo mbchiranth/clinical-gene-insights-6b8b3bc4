@@ -1,13 +1,16 @@
 import BreadcrumbNav from "@/components/BreadcrumbNav";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Settings, BookOpen, ShieldCheck, Activity, Database } from "lucide-react";
 
 const Admin = () => {
   return (
     <div className="flex flex-col flex-1 min-h-0 bg-background">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Admin / Guidelines" }]} />
-      <div className="flex-1 overflow-y-auto p-4 max-w-4xl space-y-4">
-        <h1 className="text-lg font-bold text-clinical-blue">Administration & Guidelines</h1>
+      <div className="flex-1 min-h-0 p-4 max-w-4xl w-full">
+        <h1 className="text-lg font-bold text-clinical-blue mb-4">Administration & Guidelines</h1>
 
+        <ScrollArea className="h-[calc(100vh-12rem)] pr-3">
+        <div className="space-y-4">
         <div className="grid grid-cols-2 gap-3">
           {[
             {
