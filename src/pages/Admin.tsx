@@ -3,10 +3,10 @@ import { Settings, BookOpen, ShieldCheck, Activity, Database } from "lucide-reac
 
 const Admin = () => {
   return (
-    <div className="flex flex-col flex-1 min-h-0">
+    <div className="flex flex-col flex-1 min-h-0 bg-clinical-blue-light/30">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Admin / Guidelines" }]} />
       <div className="flex-1 overflow-y-auto p-4 max-w-4xl space-y-4">
-        <h1 className="text-lg font-bold text-foreground">Administration & Guidelines</h1>
+        <h1 className="text-lg font-bold text-clinical-blue">Administration & Guidelines</h1>
 
         <div className="grid grid-cols-2 gap-3">
           {[
@@ -35,15 +35,15 @@ const Admin = () => {
               action: "View Report",
             },
           ].map((item) => (
-            <div key={item.title} className="rounded-md border bg-card p-4">
+            <div key={item.title} className="rounded-md border border-clinical-blue/20 bg-white p-4">
               <div className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded bg-primary/10 flex items-center justify-center shrink-0">
-                  <item.icon className="h-4.5 w-4.5 text-primary" />
+                <div className="w-9 h-9 rounded bg-clinical-blue/10 flex items-center justify-center shrink-0">
+                  <item.icon className="h-4.5 w-4.5 text-clinical-blue" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-sm font-semibold text-foreground">{item.title}</h3>
+                  <h3 className="text-sm font-semibold text-clinical-blue">{item.title}</h3>
                   <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>
-                  <button className="text-xs text-primary font-medium mt-2 hover:underline">
+                  <button className="text-xs text-clinical-blue font-medium mt-2 hover:underline">
                     {item.action} →
                   </button>
                 </div>
@@ -52,22 +52,22 @@ const Admin = () => {
           ))}
         </div>
 
-        <div className="rounded-md border bg-card p-4">
+        <div className="rounded-md border border-clinical-blue/20 bg-white p-4">
           <div className="flex items-center gap-2 mb-3">
-            <Settings className="h-4 w-4 text-muted-foreground" />
-            <h3 className="text-sm font-semibold text-foreground">System Configuration</h3>
+            <Settings className="h-4 w-4 text-clinical-blue" />
+            <h3 className="text-sm font-semibold text-clinical-blue">System Configuration</h3>
           </div>
           <div className="grid grid-cols-3 gap-4 text-xs">
             <div>
-              <p className="text-muted-foreground mb-0.5">Alert Threshold</p>
+              <p className="text-clinical-blue/70 mb-0.5">Alert Threshold</p>
               <p className="font-medium text-foreground">CPIC Level A & B only</p>
             </div>
             <div>
-              <p className="text-muted-foreground mb-0.5">Hard Stop Trigger</p>
+              <p className="text-clinical-blue/70 mb-0.5">Hard Stop Trigger</p>
               <p className="font-medium text-foreground">High Risk + Evidence A</p>
             </div>
             <div>
-              <p className="text-muted-foreground mb-0.5">Auto-Report</p>
+              <p className="text-clinical-blue/70 mb-0.5">Auto-Report</p>
               <p className="font-medium text-foreground">Enabled for all new patients</p>
             </div>
           </div>
