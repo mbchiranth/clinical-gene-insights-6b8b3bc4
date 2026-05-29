@@ -3,7 +3,7 @@ import { Settings, BookOpen, ShieldCheck, Activity, Database } from "lucide-reac
 
 const Admin = () => {
   return (
-    <div className="flex flex-col flex-1 min-h-0 bg-risk-high-bg">
+    <div className="flex flex-col flex-1 min-h-0 bg-background">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Admin / Guidelines" }]} />
       <div className="flex-1 overflow-y-auto p-4 max-w-4xl space-y-4">
         <h1 className="text-lg font-bold text-clinical-blue">Administration & Guidelines</h1>
@@ -35,7 +35,7 @@ const Admin = () => {
               action: "View Report",
             },
           ].map((item) => (
-            <div key={item.title} className="rounded-md border border-clinical-blue/20 bg-white p-4">
+            <div key={item.title} className={`rounded-md border p-4 ${item.title === "Compliance" ? "bg-risk-high-bg border-red-200" : "border-clinical-blue/20 bg-white"}`}>
               <div className="flex items-start gap-3">
                 <div className="w-9 h-9 rounded bg-clinical-blue/10 flex items-center justify-center shrink-0">
                   <item.icon className="h-4.5 w-4.5 text-clinical-blue" />
