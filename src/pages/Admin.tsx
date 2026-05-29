@@ -3,7 +3,7 @@ import { Settings, BookOpen, ShieldCheck, Activity, Database } from "lucide-reac
 
 const Admin = () => {
   return (
-    <div className="flex flex-col flex-1 min-h-0 bg-clinical-blue-light/30">
+    <div className="flex flex-col flex-1 min-h-0 bg-risk-high-bg">
       <BreadcrumbNav items={[{ label: "Dashboard", href: "/" }, { label: "Admin / Guidelines" }]} />
       <div className="flex-1 overflow-y-auto p-4 max-w-4xl space-y-4">
         <h1 className="text-lg font-bold text-clinical-blue">Administration & Guidelines</h1>
